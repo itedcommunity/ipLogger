@@ -1,5 +1,5 @@
 {
-  "name": "ip_logserver",
+  "name": "logserver",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
