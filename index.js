@@ -19,5 +19,5 @@ server.get('/test', (req, res, next) => {
 
 // const PORT = 3000;
 server.listen(process.env.PORT, () => {
-    console.log('Started listening on port', PORT)
+    console.log('Started listening on port', process.env.PORT)
 })
