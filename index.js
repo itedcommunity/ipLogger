@@ -1,8 +1,12 @@
 const express = require('express');
 const requestIp = require('request-ip');
 const geoIp = require('geoip-lite');
+const dotenv = require('dotenv');
+const path = require('path');
 
+dotenv.config({path: path.join(__dirname, '.env')})
 const server = express();
+
 
 server.get('/test', (req, res, next) => {
     const ip = requestIp.getClientIp(req);
@@ -13,7 +17,7 @@ server.get('/test', (req, res, next) => {
     return res.status(200).send(geo)
 })
 
-const PORT = 3000;
-server.listen(PORT, () => {
+// const PORT = 3000;
+server.listen(process.env.PORT, () => {
     console.log('Started listening on port', PORT)
 })
