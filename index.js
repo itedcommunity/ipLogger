@@ -8,7 +8,7 @@ dotenv.config({path: path.join(__dirname, '.env')})
 const server = express();
 
 
-server.get('/', (req, res, next) => {
+server.get('/test', (req, res, next) => {
     const ip = requestIp.getClientIp(req);
     const geo = geoIp.lookup(ip);
     if (!geo){
