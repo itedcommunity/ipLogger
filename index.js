@@ -14,7 +14,7 @@ server.get('/test', (req, res, next) => {
     if (!geo){
         res.status(400).send("Error in IP address parsing")
     }
-    return res.status(200).send(geo)
+    return res.status(200).send(geo, ip)
 })
 
 // const PORT = 3000;
